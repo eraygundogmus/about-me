@@ -1,15 +1,40 @@
-import React from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 
-const CommentsPage= () => {
+class CommentsPage extends Component {
+    render() {
+        const {title,email,date} = this.props;
 
-    return (
-        <div className="Comments__me">
-        <h1>Comments below</h1>   
-        <p>Praesent aliquet varius porta. Aenean ac ante lectus. Aenean nec ligula ac nisl semper vulputate sit amet et dui. Donec congue justo id pharetra eleifend. Donec dolor justo, egestas ut vestibulum vel, sodales et libero. Suspendisse quis risus sit amet sapien eleifend consectetur. Etiam vulputate mollis mi, ac consectetur felis viverra ut. Proin a dictum mauris, ut laoreet purus. Ut id diam nulla. Donec sit amet dignissim lacus. Donec eget neque et tellus efficitur pellentesque. Suspendisse libero nisl, ornare eget tristique et, vehicula a sem. Vivamus condimentum imperdiet interdum.</p>                
-   </div>
-    )
+        return (
+            <div className="Comments__me">
+            <div className="Cards">
+                <div className="Comments_1"></div>
+                <ul>
+                    <li> {title} </li>
+                    <li> {email} </li>
+                    <li> {date} </li>
+                </ul>
+            
+            
+            </div>     
+       </div>
+        )
+    }
+}
+
+CommentsPage.defaultProps = {
+    title : "İsim Soyisim",
+    email : "....@gmail.com",
+    date :  "12.12.2012"
+}
+
+CommentsPage.propTypes = {
+    title : PropTypes.string.isRequired,
+    email : PropTypes.string.isRequired,
+    date :  PropTypes.string.isRequired
 
 }
+
 
 export default CommentsPage
