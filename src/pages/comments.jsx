@@ -1,8 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Comments from "../components/Comments"
 
+//app.js bu benim
 
 class CommentsPage extends Component {
+    state = {
+
+        mycomments: [
+
+            {
+                id : 1,
+                  title : "Anan",
+                       email: "rastgele@gmail.com"
+            }
+        ]
+
+         
+    }
     render() {
         const {title,email,date} = this.props;
 
@@ -11,10 +26,11 @@ class CommentsPage extends Component {
             <div className="Cards">
                 <div className="Comments_1"></div>
                 <ul>
-                    <li> {title} </li>
-                    <li> {email} </li>
-                    <li> {date} </li>
+                    <li> {this.state.title} </li>
+                    <li> {this.state.email} </li>
+                    <li> {this.state.date} </li>
                 </ul>
+                <Comments comments = {this.state.comments}/>
             
             
             </div>     
