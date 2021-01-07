@@ -1,0 +1,47 @@
+[33mcommit f92281f040b04d023daabb8fb89116670fff5e49[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Thu Jan 7 10:25:36 2021 +0300
+
+    context.js added
+
+[33mcommit 79f1b20d9b24f8552e8fe4d956b56070ba73909f[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Thu Jan 7 09:49:22 2021 +0300
+
+    comment form added
+
+[33mcommit 1a8a171adfd221ca87ffed9876900e387bab6ea2[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Thu Jan 7 08:53:30 2021 +0300
+
+     Props Drilling
+
+[33mcommit 7727923bf102c087e4389778dd2f18ba4d4bc574[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Thu Jan 7 02:54:41 2021 +0300
+
+    building comments page still in progress
+
+[33mcommit e0ed422441473deefd0eef3e98df9bb8e99eeddf[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Thu Jan 7 00:08:41 2021 +0300
+
+    Props added on Comments Page
+
+[33mcommit 135af3d2fb6f6a14f5e277ca4e0b981419775eb6[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Wed Jan 6 22:44:05 2021 +0300
+
+    pages created and routed.
+
+[33mcommit 448b2efcd955a932deda87862300b325ac32deb5[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Wed Jan 6 21:53:12 2021 +0300
+
+    First Commit! Component files created into components folder, README.md changed, add React- Router as Depencies.
+
+[33mcommit c653c0c68411b7631079c88ea6ced715ed5afac4[m
+Author: Eray Gündoğmuş <gundogmuseray@gmail.com>
+Date:   Wed Jan 6 20:36:50 2021 +0300
+
+    Initialize project using Create React App

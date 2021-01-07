@@ -5,7 +5,7 @@ const CommentContext = React.createContext();
 
 
 
-class CommentProvider extends Component {
+export class CommentProvider extends Component {
     state = {
         mycomments: [
             {

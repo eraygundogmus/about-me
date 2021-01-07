@@ -7,12 +7,14 @@ import CommentConsumer, {CommentProvider} from "./context";
 import Appp from "./components/Appp"
 
 ReactDOM.render(
+  <div>
   <CommentProvider>
   <Appp />
-  </CommentProvider>,
+  </CommentProvider>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </div>,
   document.getElementById('root')
 );
 
