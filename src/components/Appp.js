@@ -2,27 +2,28 @@ import React, {Component} from "react"
 import Navbar from "./Navbar"
 import Comment from "./Comment"
 import Comments from "./Comments"
+import AddComment from "./AddComment"
 
 class Appp extends Component {
     state = {
         mycomments: [
             {
                     id: 1,
-                    title: "Eray Gundogmus",
+                    name: "Eray Gundogmus",
                     email: "gundogmuseray@gmail.com",
                     text : "alalalalalala"
 
             },
             {
                 id: 2,
-                title: "Eray Gundogmu33s",
+                name: "Eray Gundogmu33s",
                 email: "gundogmuseray@gmail.com",
                 text : "alalalalalala"
 
         },
         {
             id: 3,
-            title: "Eray Gundogm3435us",
+            name: "Eray Gundogm3435us",
             email: "gundogmuser3535ay@gmail.com",
             text : "alalalala1231lala"
 
@@ -36,7 +37,9 @@ class Appp extends Component {
      
         return (
                 <div className="conteiner">
-                    <Navbar />
+                    <Navbar /> <hr/>
+                    <AddComment />
+
                     <Comments mycomments = {this.state.mycomments} />
 
                 </div>

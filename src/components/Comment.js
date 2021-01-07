@@ -38,7 +38,7 @@ class Comment extends Component {
 }
 
 Comment.defaultProps = {
-    title : "İsim Soyisim",
+    name : "İsim Soyisim",
     email : "...@gmail.com",
     thecomment : "Lorem ipsum dolor sim amet"
 
@@ -46,7 +46,7 @@ Comment.defaultProps = {
 }
 
 Comment.propTypes = {
-    title : PropTypes.string.isRequired,
+    name : PropTypes.string.isRequired,
     email : PropTypes.string.isRequired,
     thecomment : PropTypes.string.isRequired
 

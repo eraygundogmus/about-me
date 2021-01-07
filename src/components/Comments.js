@@ -11,7 +11,7 @@ class Comments extends Component {
                                 return (
                                        <Comment 
                                             key = {thecomments.id}
-                                            title = {thecomments.title}
+                                            name = {thecomments.name}
                                             email = {thecomments.email}
                                             text = {thecomments.text}
                                        
