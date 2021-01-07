@@ -1,20 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CommentConsumer, {CommentProvider} from "./context";
-import Appp from "./components/Appp"
+import {CommentProvider} from "./context";
 
 ReactDOM.render(
-  <div>
-  <CommentProvider>
-  <Appp />
-  </CommentProvider>
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </div>,
+    <CommentProvider>
+      <App />
+    </CommentProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

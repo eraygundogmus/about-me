@@ -1,43 +1,28 @@
 import React, { Component } from 'react'
 
 class AddComment extends Component {
-
-    state = {
-        name: "",
-        email: "",
-        comment: ""
-
-
-
+    constructor() {
+        super()
+        this.state = {
+            name: "",
+            email: "",
+            comment: ""
+        }
     }
 
     addComment = (e) => {
         e.preventDefault();
-        const {name,email,comment} = this.state;
-
-
-        const newComment = {
-            name:name,
-            email:email,
-            comment:comment
-
-
-        }
+        const { name, email, comment } = this.state;
+        const newComment = { name, email, comment }
         console.log(newComment);
-
     }
-changeInput = (e) => {
 
-    this.setState({
-
-        [e.target.name] : e.target.value
-
-    })
-}
-
+    changeInput = (e) => {
+        this.setState({ [e.target.name] : e.target.value })
+    }
 
     render() {
-        const {name,email,comment} = this.state;
+        const { name, email, comment } = this.state;
         return (
             <div className= "col-md-8 mb-4">
 
@@ -47,7 +32,7 @@ changeInput = (e) => {
                     <h4>Add Comment</h4>
                 </div>
                 <div className= "card-body"> 
-                <form onSubmit ={this.addComment}> 
+                <form onSubmit={this.addComment}> 
                     <div className="form-group">
                         <label htmlFor="title">Name</label>
                         <input 
