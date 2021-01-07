@@ -37,13 +37,6 @@ class Comment extends Component {
 
 }
 
-Comment.defaultProps = {
-    name : "İsim Soyisim",
-    email : "...@gmail.com",
-    thecomment : "Lorem ipsum dolor sim amet"
-
-
-}
 
 Comment.propTypes = {
     name : PropTypes.string.isRequired,

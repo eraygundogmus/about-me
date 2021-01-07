@@ -3,7 +3,6 @@ import Comment from "./Comment"
 
 class Comments extends Component {
     render() {
-        const {mycomments} = this.props;
         return (
             <div>
                 {

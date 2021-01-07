@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CommentConsumer, {CommentProvider} from "./context";
+import Appp from "./components/Appp"
 
 ReactDOM.render(
+  <CommentProvider>
+  <Appp />
+  </CommentProvider>,
   <React.StrictMode>
     <App />
   </React.StrictMode>,
