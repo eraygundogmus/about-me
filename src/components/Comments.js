@@ -1,30 +1,29 @@
-import userEvent from '@testing-library/user-event';
 import React, { Component } from 'react'
-import CommentsPage from "../pages/comments.jsx"
+import Comment from "./Comment"
 
 class Comments extends Component {
     render() {
-        const {comments} = this.props;
-
+        const {mycomments} = this.props;
         return (
             <div>
-                         {
-
-            comments.map(comment => 
                 {
-                return(
-                    <CommentsPage
-                    title = {comment.title}
-                    email = {comment.email}
-                    date = {comment.date}
-                    /> )
-                }
-            
-                      }
-        
+                        mycomments.map(thecomments => {
+                                return (
+                                       <Comment 
+                                            key = {thecomments.id}
+                                            title = {thecomments.title}
+                                            email = {thecomments.email}
+                                            text = {thecomments.text}
+                                       
+                                       /> 
+                                )
+                        })
+    }
+
             </div>
         )
     }
 }
+
 
 export default Comments
