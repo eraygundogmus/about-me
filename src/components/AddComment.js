@@ -10,7 +10,7 @@ const AddComment = () => {
 
     const addComment = (e) => {
         e.preventDefault()
-        const newComment = { name, email, comment }
+        const newComment = { name, email, text: comment }
         ctx.addComment(newComment)
         setName('')
         setEmail('')
