@@ -23,7 +23,8 @@ export const defaultValue = {
             text : "alalalala1231lala"
         }
     ],
-    removeComment: () => {}
+    removeComment: () => {},
+    addComment: () => {}
 }
 
 export const CommentContext = React.createContext(defaultValue);
@@ -33,15 +34,24 @@ export class CommentProvider extends React.Component {
         super(props)
 
         this.removeComment = (id) => {
-            console.log(id)
             this.setState(state => ({
                 mycomments: state.mycomments.filter(YAHAKSANAGELIYORUM => YAHAKSANAGELIYORUM.id !== id)
             }))
         }
 
+        this.addComment = (comment) => {
+            this.setState(state => ({
+                mycomments: [
+                    ...state.mycomments,
+                    { ...comment, id: state.mycomments.length + 1 }
+                ]
+            }))
+        }
+
         this.state = {
             ...defaultValue,
-            removeComment: this.removeComment
+            removeComment: this.removeComment,
+            addComment: this.addComment
         }
     }
 

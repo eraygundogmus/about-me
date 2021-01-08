@@ -8,7 +8,7 @@ const Comments = () => {
     return (
         <div>
             {context.mycomments.map(({id, name, email, text}) =>
-                <Comment key={id} id={id} name={name} email={email} text={text}/> 
+                <Comment key={id} id={id} name={name} email={email} text={text}/>
             )}
         </div>
     )
