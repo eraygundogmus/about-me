@@ -18,23 +18,25 @@ const AddComment = () => {
     }
 
     return (
-        <div className= "col-md-8 mb-4">
-            <div className= "card">
-                <div className= "card-header">
-                    <h4>Add Comment</h4>
+        <div className= "col-md-10 mb-6 px-2 py-2 mx-5 pt-5">
+        <div className= "card">
+            <div className= "card-header text-center">
+                <h4 className= "text-center">Add Comment</h4>
+            </div>
+            <div className= "card-body">
+            <form onSubmit={addComment}>
+                <div className="form-group">
+                    <label className="text-center" htmlFor="title">Name</label>
+                    <input
+                        type= "text"
+                        placeholder = "your name"
+                        className ="form-control"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                    />
                 </div>
-                <div className= "card-body">
-                <form onSubmit={addComment}>
-                    <div className="form-group">
-                        <label htmlFor="title">Name</label>
-                        <input
-                            type= "text"
-                            placeholder = "your name"
-                            className ="form-control"
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </div>
+
+
                     <div className="form-group">
                         <label htmlFor="title">Email</label>
                         <input
@@ -56,11 +58,12 @@ const AddComment = () => {
                         />
                     </div>
                     <br/>
-                    <button className="btn btn-danger btn-block" type="submit">Add comment</button>
+                    <button className="btn btn-danger btn-block " type="submit">Add comment</button>
                 </form>
                 </div>
             </div>
         </div>
+
     )
 }
 

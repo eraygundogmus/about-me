@@ -1,5 +1,8 @@
 import React from 'react'
 import './App.css';
+import './css/bootstrap-grid.css';
+import './css/bootstrap-reboot.css';
+import './css/bootstrap.css';
 
 import Header from "./components/Header.js"
 
@@ -18,8 +21,7 @@ function App() {
       <Router> 
         <Switch>
           <Route exact path="/" component={AboutMePage} />
-          <Route path="/aboutme" component={Appp} />
-          <Route path="/comments" component={CommentsPage} />
+          <Route path="/comments" component={Appp} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/works" component={WorksPage} />
           <Route exact path="/404" component={NotFoundPage} />
