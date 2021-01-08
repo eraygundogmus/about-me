@@ -1,87 +1,67 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { CommentContext } from '../context'
 
-class AddComment extends Component {
-    constructor() {
-        super()
-        this.state = {
-            name: "",
-            email: "",
-            comment: ""
-        }
-    }
+const AddComment = () => {
+    const [name, setName] = React.useState('')
+    const [email, setEmail] = React.useState('')
+    const [comment, setComment] = React.useState('')
 
-    addComment = (e) => {
-        e.preventDefault();
-        const { name, email, comment } = this.state;
+    const ctx = React.useContext(CommentContext)
+
+    const addComment = (e) => {
+        e.preventDefault()
         const newComment = { name, email, comment }
-        console.log(newComment);
+        ctx.addComment(newComment)
+        setName('')
+        setEmail('')
+        setComment('')
     }
 
-    changeInput = (e) => {
-        this.setState({ [e.target.name] : e.target.value })
-    }
-
-    render() {
-        const { name, email, comment } = this.state;
-        return (
-            <div className= "col-md-8 mb-4">
-
+    return (
+        <div className= "col-md-8 mb-4">
             <div className= "card">
-
                 <div className= "card-header">
                     <h4>Add Comment</h4>
                 </div>
-                <div className= "card-body"> 
-                <form onSubmit={this.addComment}> 
+                <div className= "card-body">
+                <form onSubmit={addComment}>
                     <div className="form-group">
                         <label htmlFor="title">Name</label>
-                        <input 
+                        <input
                             type= "text"
-                            name= "name"
-                            id = "id"
                             placeholder = "your name"
                             className ="form-control"
-                            value= {name}
-                            onChange = {this.changeInput}
-                        
+                            value={name}
+                            onChange={e => setName(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="title">Email</label>
-                        <input 
+                        <input
                             type= "text"
-                            name= "email"
-                            id = "email"
                             placeholder = "your email"
                             className ="form-control"
                             value= {email}
-                            onChange = {this.changeInput}
+                            onChange={e => setEmail(e.target.value)}
                         />
                     </div>
                     <div className="form-group">
                         <label htmlFor="title">Comment</label>
-                        <input 
+                        <input
                             type= "text"
-                            name= "comment"
-                            id = "comment"
                             placeholder = "your comment"
                             className ="form-control"
                             value= {comment}
-                            onChange = {this.changeInput}
+                            onChange={e => setComment(e.target.value)}
                         />
                     </div>
                     <br/>
-
                     <button className="btn btn-danger btn-block" type="submit">Add comment</button>
                 </form>
-                
                 </div>
-
             </div>
-                
-            </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default AddComment
