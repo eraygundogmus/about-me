@@ -4,21 +4,13 @@ import { CommentContext } from '../context'
 const AddComment = () => {
     const [name, setName] = React.useState('')
     const [email, setEmail] = React.useState('')
-<<<<<<< HEAD
-    const [text, setComment] = React.useState('')
-=======
     const [comment, setComment] = React.useState('')
->>>>>>> f1823e9784d2e44ab2f6a5a859f2896659dc2cbf
 
     const ctx = React.useContext(CommentContext)
 
     const addComment = (e) => {
         e.preventDefault()
-<<<<<<< HEAD
-        const newComment = { name, email, text }
-=======
         const newComment = { name, email, comment }
->>>>>>> f1823e9784d2e44ab2f6a5a859f2896659dc2cbf
         ctx.addComment(newComment)
         setName('')
         setEmail('')
@@ -59,11 +51,7 @@ const AddComment = () => {
                             type= "text"
                             placeholder = "your comment"
                             className ="form-control"
-<<<<<<< HEAD
-                            value= {text}
-=======
                             value= {comment}
->>>>>>> f1823e9784d2e44ab2f6a5a859f2896659dc2cbf
                             onChange={e => setComment(e.target.value)}
                         />
                     </div>
