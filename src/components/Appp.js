@@ -5,22 +5,21 @@ import Comments from "./Comments"
 import AddComment from "./AddComment"
 
 class Appp extends Component {
-   
+    constructor() {
+        super()
+        this.state = {
+            mycomments: []
+        }
+    }
 
     render() {
-
-     
         return (
-                <div className="conteiner">
-                    <Navbar /> <hr/>
-                    <AddComment />
-
-                    <Comments mycomments = {this.state.mycomments} />
-
-                </div>
-
+            <div className="conteiner">
+                <Navbar /> <hr/>
+                <AddComment />
+                <Comments mycomments={this.state.mycomments} />
+            </div>
         )
-
     }
 }
 

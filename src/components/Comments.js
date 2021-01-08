@@ -1,28 +1,17 @@
 import React, { Component } from 'react'
 import Comment from "./Comment"
+import { CommentContext } from "../context"
 
-class Comments extends Component {
-    render() {
-        return (
-            <div>
-                {
-                        mycomments.map(thecomments => {
-                                return (
-                                       <Comment 
-                                            key = {thecomments.id}
-                                            name = {thecomments.name}
-                                            email = {thecomments.email}
-                                            text = {thecomments.text}
-                                       
-                                       /> 
-                                )
-                        })
-    }
+const Comments = () => {
+    const context = React.useContext(CommentContext)
 
-            </div>
-        )
-    }
+    return (
+        <div>
+            {context.mycomments.map(({id, name, email, text}) =>
+                <Comment key={id} id={id} name={name} email={email} text={text}/>
+            )}
+        </div>
+    )
 }
-
 
 export default Comments
